@@ -1,0 +1,4 @@
+D:\vinod\Samples\Web\Application\SAS\SAS.Entity\bin\Debug\SAS.Entity.dll
+D:\vinod\Samples\Web\Application\SAS\SAS.Entity\bin\Debug\SAS.Entity.pdb
+D:\vinod\Samples\Web\Application\SAS\SAS.Entity\obj\Debug\SAS.Entity.dll
+D:\vinod\Samples\Web\Application\SAS\SAS.Entity\obj\Debug\SAS.Entity.pdb

@@ -1,0 +1,5 @@
+D:\vinod\Samples\Web\Application\SAS\SAS.Data\bin\Release\SAS.Data.dll
+D:\vinod\Samples\Web\Application\SAS\SAS.Data\bin\Release\SAS.Data.pdb
+D:\vinod\Samples\Web\Application\SAS\SAS.Data\obj\Release\SAS.Data.dll
+D:\vinod\Samples\Web\Application\SAS\SAS.Data\obj\Release\SAS.Data.pdb
+D:\vinod\Samples\Web\Application\SAS\SAS.Data\obj\Release\SAS.Data.csprojResolveAssemblyReference.cache

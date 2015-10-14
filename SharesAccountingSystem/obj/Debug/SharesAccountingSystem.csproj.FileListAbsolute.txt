@@ -1,0 +1,16 @@
+D:\Bhaskar\Samples\SAS\SharesAccountingSystem\bin\Debug\SharesAccountingSystem.exe.config
+D:\Bhaskar\Samples\SAS\SharesAccountingSystem\bin\Debug\SharesAccountingSystem.exe
+D:\Bhaskar\Samples\SAS\SharesAccountingSystem\bin\Debug\SharesAccountingSystem.pdb
+D:\Bhaskar\Samples\SAS\SharesAccountingSystem\obj\Debug\SharesAccountingSystem.exe
+D:\Bhaskar\Samples\SAS\SharesAccountingSystem\obj\Debug\SharesAccountingSystem.pdb
+D:\Bhaskar\Samples\SAS\SharesAccountingSystem\bin\Debug\SharesBusiness.dll
+D:\Bhaskar\Samples\SAS\SharesAccountingSystem\bin\Debug\SharesBusiness.pdb
+D:\Bhaskar\Samples\SAS\SharesAccountingSystem\obj\Debug\SharesAccountingSystem.csprojResolveAssemblyReference.cache
+D:\SAS\SharesAccountingSystem\bin\Debug\SharesAccountingSystem.exe.config
+D:\SAS\SharesAccountingSystem\obj\Debug\SharesAccountingSystem.exe
+D:\SAS\SharesAccountingSystem\obj\Debug\SharesAccountingSystem.pdb
+D:\SAS\SharesAccountingSystem\obj\Debug\SharesAccountingSystem.csprojResolveAssemblyReference.cache
+D:\SAS\SharesAccountingSystem\bin\Debug\SharesAccountingSystem.exe
+D:\SAS\SharesAccountingSystem\bin\Debug\SharesAccountingSystem.pdb
+D:\SAS\SharesAccountingSystem\bin\Debug\SharesBusiness.dll
+D:\SAS\SharesAccountingSystem\bin\Debug\SharesBusiness.pdb
