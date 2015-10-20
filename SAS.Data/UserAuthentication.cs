@@ -18,7 +18,7 @@ namespace SAS.Data
 
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "a05014_authenticate_user";
+                command.CommandText = "authenticate_user";
 
                 command.Parameters.AddWithValue("@login_id", loginId);
                 command.Parameters.AddWithValue("@password", password);

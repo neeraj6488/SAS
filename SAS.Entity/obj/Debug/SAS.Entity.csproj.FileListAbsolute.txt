@@ -2,3 +2,8 @@ D:\vinod\Samples\Web\Application\SAS\SAS.Entity\bin\Debug\SAS.Entity.dll
 D:\vinod\Samples\Web\Application\SAS\SAS.Entity\bin\Debug\SAS.Entity.pdb
 D:\vinod\Samples\Web\Application\SAS\SAS.Entity\obj\Debug\SAS.Entity.dll
 D:\vinod\Samples\Web\Application\SAS\SAS.Entity\obj\Debug\SAS.Entity.pdb
+E:\New folder\New folder\SAS\SAS.Entity\bin\Debug\SAS.Entity.dll
+E:\New folder\New folder\SAS\SAS.Entity\bin\Debug\SAS.Entity.pdb
+E:\New folder\New folder\SAS\SAS.Entity\obj\Debug\SAS.Entity.csprojResolveAssemblyReference.cache
+E:\New folder\New folder\SAS\SAS.Entity\obj\Debug\SAS.Entity.dll
+E:\New folder\New folder\SAS\SAS.Entity\obj\Debug\SAS.Entity.pdb

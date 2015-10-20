@@ -9,3 +9,14 @@ D:\vinod\Samples\Web\Application\SAS\SAS.Business\obj\Debug\SAS.Business.dll
 D:\vinod\Samples\Web\Application\SAS\SAS.Business\obj\Debug\SAS.Business.pdb
 D:\vinod\Samples\Web\Application\SAS\SAS.Business\bin\Debug\Para.Utility.dll
 D:\vinod\Samples\Web\Application\SAS\SAS.Business\bin\Debug\Para.Utility.pdb
+E:\New folder\New folder\SAS\SAS.Business\bin\Debug\SAS.Business.dll
+E:\New folder\New folder\SAS\SAS.Business\bin\Debug\SAS.Business.pdb
+E:\New folder\New folder\SAS\SAS.Business\bin\Debug\Para.Utility.dll
+E:\New folder\New folder\SAS\SAS.Business\bin\Debug\SAS.Data.dll
+E:\New folder\New folder\SAS\SAS.Business\bin\Debug\SAS.Entity.dll
+E:\New folder\New folder\SAS\SAS.Business\bin\Debug\Para.Utility.pdb
+E:\New folder\New folder\SAS\SAS.Business\bin\Debug\SAS.Data.pdb
+E:\New folder\New folder\SAS\SAS.Business\bin\Debug\SAS.Entity.pdb
+E:\New folder\New folder\SAS\SAS.Business\obj\Debug\SAS.Business.csprojResolveAssemblyReference.cache
+E:\New folder\New folder\SAS\SAS.Business\obj\Debug\SAS.Business.dll
+E:\New folder\New folder\SAS\SAS.Business\obj\Debug\SAS.Business.pdb

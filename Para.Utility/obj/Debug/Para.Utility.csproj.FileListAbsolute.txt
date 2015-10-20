@@ -2,3 +2,8 @@ D:\vinod\Samples\Web\Application\SAS\Para.Utility\bin\Debug\Para.Utility.dll
 D:\vinod\Samples\Web\Application\SAS\Para.Utility\bin\Debug\Para.Utility.pdb
 D:\vinod\Samples\Web\Application\SAS\Para.Utility\obj\Debug\Para.Utility.dll
 D:\vinod\Samples\Web\Application\SAS\Para.Utility\obj\Debug\Para.Utility.pdb
+E:\New folder\New folder\SAS\Para.Utility\bin\Debug\Para.Utility.dll
+E:\New folder\New folder\SAS\Para.Utility\bin\Debug\Para.Utility.pdb
+E:\New folder\New folder\SAS\Para.Utility\obj\Debug\Para.Utility.csprojResolveAssemblyReference.cache
+E:\New folder\New folder\SAS\Para.Utility\obj\Debug\Para.Utility.dll
+E:\New folder\New folder\SAS\Para.Utility\obj\Debug\Para.Utility.pdb

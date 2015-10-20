@@ -1,3 +1,4 @@
+@@ -0,0 +1,147 @@
 USE [SQLTraining]
 GO
 
@@ -11,12 +12,12 @@ GO
 SET ANSI_PADDING ON
 GO
 
-CREATE TABLE [dbo].[a05014_Profile](
+CREATE TABLE [dbo].[ProfileType](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Code] [varchar](30) NOT NULL,
 	[Name] [varchar](100) NOT NULL,
 	[Description] [varchar](1000) NULL,
- CONSTRAINT [PK_a05014_Profile] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_ProfileType] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
@@ -31,11 +32,11 @@ GO
 =================================================================================================================----------------------------------------------------------------------------------------------------------
 
 
-INSERT INTO a05014_Profile(Code,Name,Description)
+INSERT INTO ProfileType(Code,Name,Description)
 VALUES ('ADMIN','Administrator','This user has full read write and execute permissions.')
 
 
-INSERT INTO a05014_Profile(Code,Name,Description)
+INSERT INTO ProfileType(Code,Name,Description)
 VALUES ('USER','User','This user has read permissions only.')
 
 
@@ -55,15 +56,15 @@ GO
 SET ANSI_PADDING ON
 GO
 
-CREATE TABLE [dbo].[a05014_user](
+CREATE TABLE [dbo].[User](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[login_id] [varchar](50) NOT NULL,
 	[password] [varchar](1000) NOT NULL,
 	[user_name] [varchar](100) NOT NULL,
-	[invalid_login_attempts] [int] NOT NULL CONSTRAINT [DF_a05014_user_invalid_login_attempts]  DEFAULT ((0)),
-	[is_locked] [bit] NOT NULL CONSTRAINT [DF_a05014_user_is_locked]  DEFAULT ((0)),
+	[invalid_login_attempts] [int] NOT NULL CONSTRAINT [DF_User_invalid_login_attempts]  DEFAULT ((0)),
+	[is_locked] [bit] NOT NULL CONSTRAINT [DF_User_is_locked]  DEFAULT ((0)),
 	[profile_id] [int] NOT NULL,
- CONSTRAINT [PK_a05014_user] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
@@ -74,11 +75,11 @@ GO
 SET ANSI_PADDING OFF
 GO
 
-ALTER TABLE [dbo].[a05014_user]  WITH CHECK ADD  CONSTRAINT [FK_a05014_user_a05014_Profile] FOREIGN KEY([profile_id])
-REFERENCES [dbo].[a05014_Profile] ([Id])
+ALTER TABLE [dbo].[User]  WITH CHECK ADD  CONSTRAINT [FK_User_ProfileType] FOREIGN KEY([profile_id])
+REFERENCES [dbo].[ProfileType] ([Id])
 GO
 
-ALTER TABLE [dbo].[a05014_user] CHECK CONSTRAINT [FK_a05014_user_a05014_Profile]
+ALTER TABLE [dbo].[User] CHECK CONSTRAINT [FK_User_ProfileType]
 GO
 
 
@@ -86,8 +87,8 @@ GO
 
 
 
-INSERT INTO a05014_user(login_id,password,user_name,invalid_login_attempts,is_locked,profile_id)
-values ('vipuld','pass','Vipul Deshbhratar',0,'False',1)
+INSERT INTO [User]([login_id],[password],[user_name],[invalid_login_attempts],[is_locked],[profile_id])
+VALUES ('vipuld','pass','Vipul Deshbhratar',0,'False',1)
 
 
 =================================================================================================================
@@ -101,13 +102,13 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 /*
-Auther: Bhaskar Yadav
-Created on: 24-Sep-2015
+Auther: Neeraj Deshbhratar
+Created on: 21-Oct-2015
 Purpose: Authenticate user
 Example:
-exec a05014_authenticate_user 'bhaskary', 'pass'
+exec authenticate_user 'vipuld', 'pass'
 */
-ALTER procedure [dbo].[a05014_authenticate_user]
+CREATE procedure [dbo].[authenticate_user]
 	@login_id varchar(50)
 	, @password varchar(1000)
 as
@@ -117,31 +118,35 @@ begin
 
 	declare @is_valid_password bit = 1
 
-	if exists(select id from a05014_user where login_id=@login_id and [password]!=@password)
+	if exists(select id from [User] where login_id=@login_id and [password]!=@password)
 	begin
 		set @is_valid_password=0
 
-		update a05014_user set invalid_login_attempts=invalid_login_attempts+1 where login_id=@login_id
+		update [User] set invalid_login_attempts=invalid_login_attempts+1 where login_id=@login_id
 
-		if ((select invalid_login_attempts from a05014_user where login_id=@login_id)>=3)
+		if ((select invalid_login_attempts from [User] where login_id=@login_id)>=3)
 		begin
-			update a05014_user set is_locked=1 where login_id=@login_id
+			update [User] set is_locked=1 where login_id=@login_id
 		end
 	end
-	else if exists(select id from a05014_user where login_id=@login_id and [password]=@password)
+	else if exists(select id from [User] where login_id=@login_id and [password]=@password)
 	begin
-		update a05014_user set invalid_login_attempts=0, is_locked=0 where login_id=@login_id
+		update [User] set invalid_login_attempts=0, is_locked=0 where login_id=@login_id
 	end
 
 	select	@is_valid_password as is_valid_password, u.id , login_id, password, [user_name], invalid_login_attempts, is_locked
 			, p.id as [profile_id], p.Code, p.Name
-	from	a05014_user u
-			join a05014_profile p on u.profile_id=p.id
+	from	[User] u
+			join ProfileType p on u.profile_id=p.id
 	where	login_id=@login_id
 
 	------------------------------------------------------------------------------------------------------
 	set nocount off
 end
 
+============================================================================================================
 
-=================================================================================================================
+
+select @@SERVERNAME
+
+============================================================================================================
